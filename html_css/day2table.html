@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+    <h1><center><i>WORKING WITH TABLES</i></center></h1>
+    <hr>
+    <h4>CREATING TABLE USING TH FOR FIRST ROW</h4>
+    <p>Actual reason behind this error is that you cannot nest inside a th. only value can be given inside th and not tags.<br>
+        when th is given instead of tr, the browser assumes that tr is missing and adds tr. and the th becomes the first column <br>
+        inside the tr with blank value. inspect to see the diff between actual and assumed code. 
+    <table border="1px">
+        <th>
+            <td>S.No.</td>
+            <td>Roll.No</td>
+            <td>Name</td>
+        </th>
+        <tr>
+            <td>1</td>
+            <td>121</td>
+            <td>pim</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>122</td>
+            <td>cam</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>123</td>
+            <td>jam</td>
+        </tr>
+    </table>
+    <HR>
+
+    <h4>CREATING TABLE USING TR FOR FIRST ROW</h4>
+
+    <table border="1px">
+        <tr>
+            <td>S.No.</td>
+            <td>Roll.No</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>121</td>
+            <td>pim</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>122</td>
+            <td>cam</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>123</td>
+            <td>jam</td>
+        </tr>
+    </table>
+    <hr>
+    <h4>CENTERING AND IMPLEMENTING TH</h4>
+    <p>Giving headers inside th tag and also centering table aand elements.</p>
+
+    <center><table border="1px">
+        <tr>
+            <th>S.No</th>
+            <th><center>R</center></th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td><center>1</center></td>
+            <td>121</td>
+            <td>pim</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>122</td>
+            <td>cam</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>123</td>
+            <td>jam</td>
+        </tr>
+    </table>
+</center>
+<hr>
+
+</body>
+</html>
