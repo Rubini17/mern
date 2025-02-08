@@ -1,0 +1,14 @@
+.external{
+    background-color: aquamarine;
+    color:darkorange;
+    height: 700px;
+    width: 700px;
+}
+#id1{
+    font-family: cursive;
+    font-size: xx-large;
+}
+
+*{
+    background-color: dimgray;
+}
