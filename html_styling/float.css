@@ -1,0 +1,24 @@
+.float-left{
+    float:left;
+    margin:17px;
+}
+
+.float-right{
+    float:right;
+    margin:10px;
+}
+
+body{
+    background-color: lightslategray;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img{
+    border:30px solid whitesmoke;
+    opacity: 0.5;
+}
+ 
+
+
