@@ -1,0 +1,22 @@
+label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+
+input{
+    border: 2px solid ;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+    
+}
+
+input[type=number]{
+    border: 2px solid;
+    background-color: blanchedalmond;
+   
+}
+
+button{
+    background-color: blanchedalmond;
+}
