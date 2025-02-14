@@ -1,0 +1,80 @@
+.transition{
+    color:deepskyblue;
+    background-color: darksalmon;
+    transition: opacity 1s ease-in-out,height 10s,background-color 10s, color 10s, transform 1s;
+}
+.transition:hover{
+    background-color:deepskyblue;
+    color: darksalmon;
+    padding:30px;
+    height:200px;
+    width: 300px;
+    transform: rotate(180deg);
+    
+}
+@keyframes anim_div {
+    from{
+        background-color: deepskyblue;
+     }
+     to{
+        background-color: darksalmon;
+
+     }
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.ani{
+    animation-name: anim_div;
+    background-color: deepskyblue;
+    width:200px;
+    height: 200px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes anime_div {
+   
+    0%{
+        background-color: aquamarine;
+        top:0px;
+        left:0px;
+    }
+    25%{
+        background-color: chartreuse;
+        top:0px;
+        left:200px;
+    }
+    50%{
+        background-color: gold;
+        top:200px;
+        left:200px;
+    }
+    75%{
+        background-color:navy;
+        top:200px;
+        left:0px;
+
+    }
+    100%{
+        background-color: firebrick;
+        top:0px;
+        left:0px;
+        
+    }
+}
+.anime{
+    animation-name: anime_div;
+    position:relative;
+    background-color: deepskyblue;
+    width:200px;
+    height: 200px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
