@@ -1,4 +1,4 @@
-nav{
+/* nav{
     display: flex;
     flex-direction: column;
     background-color:lavender;
@@ -42,6 +42,67 @@ HEADER{
 
 .container2{
     display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ffff0d;
+} */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+    list-style-type: none;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.submenu {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0; /* Removes the default padding */
+}
+
+.link:hover {
+    text-decoration: underline;
+    background-color: crimson;
+    color: aliceblue;
+}
+
+.link {
+    text-decoration: none;
+    color: gray;
+}
+
+HEADER {
+    background-color: lavender;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #ffff0d;
+}
+
+.items {
+    background-color: rgb(255, 0, 217);
+    color: rgb(255, 251, 0);
+    padding: 30px;
+}
+
+.container2 {
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #ffff0d;
