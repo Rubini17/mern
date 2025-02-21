@@ -7,6 +7,9 @@ import NavBar from "./components/functionalcomp/navbar.jsx"
 import UseEffect from "./components/functionalcomp/hooks/useEffect.jsx"
 import UseMemo from "./components/functionalcomp/hooks/useMemos.jsx"
 import UseRef from "./components/functionalcomp/hooks/useRef.jsx"
+import UseCallback from "./components/functionalcomp/hooks/useCallback.jsx"
+import UseMemoize from "./components/functionalcomp/hooks/useMemoize.jsx"
+import HoC from "./components/functionalcomp/hoc/hoC.jsx"
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 function App(){
   return(
@@ -22,6 +25,9 @@ function App(){
       <Route path='/useEffect' element={<UseEffect/>}/>
       <Route path='/useMemo' element={<UseMemo/>}/>
       <Route path='/useRef' element={<UseRef/>}/>
+      <Route path='/useCallback' element={<UseCallback/>}/>
+      <Route path='/useMemoize' element={<UseMemoize/>}/>
+      <Route path='/hoC' element={<HoC/>}/>
     </Routes>
     </BrowserRouter>
 
