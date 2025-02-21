@@ -10,6 +10,10 @@ import UseRef from "./components/functionalcomp/hooks/useRef.jsx"
 import UseCallback from "./components/functionalcomp/hooks/useCallback.jsx"
 import UseMemoize from "./components/functionalcomp/hooks/useMemoize.jsx"
 import HoC from "./components/functionalcomp/hoc/hoC.jsx"
+import Memo from "./components/functionalcomp/memoisation/memo.jsx"
+import Number from "./components/functionalcomp/memoisation/number.jsx"
+import Text from "./components/functionalcomp/memoisation/text.jsx"
+import LazyLoading from "./components/functionalcomp/memoisation/lazyloading.jsx"
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 function App(){
   return(
@@ -28,6 +32,10 @@ function App(){
       <Route path='/useCallback' element={<UseCallback/>}/>
       <Route path='/useMemoize' element={<UseMemoize/>}/>
       <Route path='/hoC' element={<HoC/>}/>
+      <Route path="/memo" element={<Memo/>} />
+      <Route path="/number" element={<Number/>}/>
+      <Route path="/text" element={<Text/>}/>
+      <Route path="/lazy" element={<LazyLoading/>}/>
     </Routes>
     </BrowserRouter>
 
