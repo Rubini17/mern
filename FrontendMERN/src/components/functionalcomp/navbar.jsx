@@ -22,14 +22,18 @@ const NavBar=()=>{
                 {/* <li><Link to='/useCallback' class="link">UseCallback</Link></li> */}
                 <li><Link to='/useMemoize' class="link">UseMemoize</Link></li>
                 <li><Link to='/hoC' class="link">HoC</Link></li>
-            <li ><Link to='/memo' class="link">Memo</Link></li><div class="list1">
+            <li ><Link to='/memo' class="link">Memo</Link></li>
+            <li ><Link to='/stu' class="link">Res</Link></li>
+
+            {/* <div class="list1">
             <ol>
                 <li class="list2"><Link to="/memo" class="link">Memo</Link></li>
                 <li class="list2"><Link to="/number" class="link">Number</Link></li>
                 <li class="list2"><Link to="/text" class="link">Text</Link></li>
                 <li class="list2"><Link to="/lazy" class="link">LazyLoading</Link></li>
             </ol>
-        </div>
+        </div> */}
+
                 
             </nav>
         </header>

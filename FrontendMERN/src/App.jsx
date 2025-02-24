@@ -14,6 +14,8 @@ import Memo from "./components/functionalcomp/memoisation/memo.jsx"
 import Number from "./components/functionalcomp/memoisation/number.jsx"
 import Text from "./components/functionalcomp/memoisation/text.jsx"
 import LazyLoading from "./components/functionalcomp/memoisation/lazyloading.jsx"
+import Student from "./components/functionalcomp/contextAPI/Student.jsx"
+
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 function App(){
   return(
@@ -36,6 +38,7 @@ function App(){
       <Route path="/number" element={<Number/>}/>
       <Route path="/text" element={<Text/>}/>
       <Route path="/lazy" element={<LazyLoading/>}/>
+      <Route path="/stu" element={<Student sgpa="9" cgpa="9" />}/>
     </Routes>
     </BrowserRouter>
 

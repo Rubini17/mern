@@ -1,7 +1,7 @@
 nav{
     display: flex;
     flex-direction: row;
-    background-color: darkgoldenrod;
+    background-color:darkgoldenrod;
     font-size: 3em;
     list-style-type: none;
     justify-content: space-evenly;
@@ -9,7 +9,7 @@ nav{
     padding:10px
 }
 body{
-    background-color: rgba(0, 0, 0, 0.448);
+    background-color:  white;
 }
 
 
