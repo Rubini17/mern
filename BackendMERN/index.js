@@ -10,7 +10,7 @@ dotenv.config();
 //console.log(process.env.MONGODB_URL);
 
 mdb
-  .connect(process.env.MONGODB_URL)    //or .connect("mongodb://localhost:27017/Sample_db") or .connect("mongodb://127.0.0.17:27017/Sample_db") 
+  .connect(process.env.MONGODB_URL)    //or .connect("mongodb://localhost:27017/Sample_db") or .connect("mongodb://127.0.0.1:27017/Sample_db") 
   .then(() => {
     console.log("MDB connection successful");
   })
@@ -40,6 +40,7 @@ app.post("/signup",(req,res)=>{
     });
     newSignup.save();
     console.log("Signup successful");
+
     res.status(201).json({message:"Signup Successful",isSignup:true});
 }
 catch(error){
