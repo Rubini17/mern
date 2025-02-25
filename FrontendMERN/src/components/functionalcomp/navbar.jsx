@@ -11,7 +11,7 @@ const NavBar=()=>{
     return(
         <header>
             <nav>
-                <li><Link to='/home' class="link">Home</Link></li>
+                <li><Link to='/' class="link">Home</Link></li>
                 <li><Link to='/login' class="link">Login</Link></li>
                 {/* <li><Link to='/about' class="link">About</Link></li>
                 <li><Link to='/gallery' class="link">Gallery</Link></li>
