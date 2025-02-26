@@ -13,6 +13,7 @@ const NavBar=()=>{
             <nav>
                 <li><Link to='/' class="link">Home</Link></li>
                 <li><Link to='/login' class="link">Login</Link></li>
+                <li><Link to='/signup' class="link">Signup</Link></li>
                 {/* <li><Link to='/about' class="link">About</Link></li>
                 <li><Link to='/gallery' class="link">Gallery</Link></li>
                 <li><Link to='/signup' class="link">Signup</Link></li>

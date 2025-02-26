@@ -28,8 +28,8 @@ function Login() {
     return(
       <div class="container2"><br/>
         <h1 ><center>Login</center></h1>
-       <center> <label style={style1}>Name:</label>
-        <input type="text" placeholder="Enter your username" style={style2}></input></center> 
+       <center> <label style={style1}>Email:</label>
+        <input type="emai;" placeholder="Enter your email" style={style2}></input></center> 
         <br/>
         <center><label style={style1}>Password:</label>
         <input type="password" placeholder="Enter your password" style={style2}></input></center>
