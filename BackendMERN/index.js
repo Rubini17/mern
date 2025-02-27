@@ -2,6 +2,7 @@ const express = require("express");
 const mdb = require("mongoose");
 const dotenv= require('dotenv');
 const bcrypt= require('bcrypt');
+const jwt=require('jsonwebtoken');
 const cors= require('cors');
 const Signup= require('./models/signupSchema')
 const Login= require('./models/loginSchema')
@@ -12,6 +13,31 @@ const PORT = 3008;
 dotenv.config();
 
 //console.log(process.env.MONGODB_URL);
+var  verifyTok=(req,res,next)=>{
+  console.log("Middleware Check");
+  const token= req.headers.authorisation;
+ 
+  if(!token)
+  {
+    res.json("Request Denied");
+  }
+  try{
+    console.log(token);
+    console.log(jwt.verify(token.process.env.SECRET_KEY));
+    console.log(payload.name);
+    req.name= payload.name;
+    next();
+
+  }
+
+  catch(err)
+  {
+    console.log(err);
+    res.send("Either token expired or token is wrong");
+  }
+    
+
+}
 
 mdb
   .connect(process.env.MONGODB_URL)    //or .connect("mongodb://localhost:27017/Sample_db") or .connect("mongodb://127.0.0.1:27017/Sample_db") 
@@ -22,11 +48,11 @@ mdb
     console.log("Error occured,check your connection string", err);
   });
 
-app.get("/", (req, res) => {
+app.get("/",(req, res) => {
   res.send("<h1>Welcome to Backend Server</h1>");
 });
 
-app.get("/static", (req, res) => {
+app.get("/static",verifyTok, (req, res) => {
   res.sendFile("/Users/rubin/OneDrive/Desktop/MERN/index.html");
 });
 
@@ -58,8 +84,9 @@ catch(error){
 
 );
 
-app.get("/getsignupinfo",(req,res)=>{
-  const signup= Signup.find();
+
+app.get("/getsignupinfo",verifyTok,async(req,res)=>{
+  const signup= await Signup.find();
   console.log(signup);
   res.json("Signup detail fetched")
 })
@@ -71,14 +98,21 @@ app.post("/login", async(req,res)=>{
       email:email
     });
   
-    if(existLogin != null)
+    if(existLogin)
     {
+      const payload= {
+        name: existLogin.name,
+        email: existLogin.email,
+      }
+ 
       const isValidPassword= await bcrypt.compare(password, existLogin.password);
       console.log(isValidPassword);
       if(isValidPassword)
       {
+        const token= jwt.sign(payload, process.env.SECRET_KEY,{expiresIn:"10m"});
+        console.log(token);
         
-        res.status(200).json({message:"login successful",isLogin:true})
+        res.status(200).json({message:"login successful",isLogin:true, token: token})
       }
       else{
         res.status(401).json({message:"invalid password",isLogin:false})
