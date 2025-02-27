@@ -78,15 +78,15 @@ app.post("/login", async(req,res)=>{
       if(isValidPassword)
       {
         
-        res.status(200).json("login successful")
+        res.status(200).json({message:"login successful",isLogin:true})
       }
       else{
-        res.status(401).json("invalid password")
+        res.status(401).json({message:"invalid password",isLogin:false})
       }
-      // console.log(existLogin);
+      
     }
     else{
-      res.status(400).json("User not found , wanna Signup ")
+      res.status(400).json({message:"User not found , wanna Signup ",isLogin:false})
     }
 
 }

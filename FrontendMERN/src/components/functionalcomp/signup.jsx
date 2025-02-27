@@ -39,7 +39,8 @@ function Signup() {
         phone:phone,
       }
     );
-    // console.log(req.data);
+    console.log(email,password);
+    console.log(req.data);
     const message= req.data.message;
     const isSignup= req.data.isSignup;
     if(isSignup){
